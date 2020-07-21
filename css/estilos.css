@@ -36,3 +36,36 @@ overflow: hidden;
     75% {margin-left: -2100px;}
     100% {margin-left: -2100px;}
 }
+h3{
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: x-large;
+}
+.contenedor{
+    background-color: white;
+    padding: 1em;
+    overflow: hidden;
+    width: 1195px;
+}
+.item{
+    margin: 1em;
+    padding: 1em;
+    color: white;
+    float: left;
+    height: 110px;
+    width: 258px;
+}
+#item1{
+    background-color: #852C84;
+}
+#item2{
+    background-color: #852C84;
+}
+#item3{
+    background-color: #852C84;
+}
+#item4{
+    background-color: #852C84;
+}
