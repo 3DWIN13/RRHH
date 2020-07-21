@@ -21,15 +21,7 @@ overflow: hidden;
     display: flex;
     animation: slide 20s infinite alternate;
 }
-#redessSociales{
-    position: fixed;
-    right: 0;
-    top: 40%;
-    width: 30px;
-    padding: 5px;
-    background: white;
-    z-index: 99999;
-}
+
 
 @keyframes slide{
     0% {margin-left: 0px;}
