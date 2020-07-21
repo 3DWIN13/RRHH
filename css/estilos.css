@@ -73,3 +73,7 @@ h2{
 #item4{
     background-color: #852C84;
 }
+#noticia h2{
+    border-bottom: 3px solid #1a75bb;
+    width: 1145px;
+}
