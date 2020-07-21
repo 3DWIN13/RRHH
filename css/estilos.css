@@ -42,6 +42,10 @@ h3{
     text-align: center;
     text-decoration: none;
     font-size: x-large;
+    font-family: Georgia;
+}
+h2{
+    font-family: Georgia;
 }
 .contenedor{
     background-color: white;
