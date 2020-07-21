@@ -86,3 +86,19 @@ h2{
     height: 110px;
     width: 258px;
 }
+#logo_pie {
+    width: auto;
+    height: auto;
+    background-color: #E6E6E7;
+   
+}
+#logo_pie {
+    border-top: 5px solid #852C84;
+}
+#logo_pie img {
+    margin-top: 0%;
+    margin: 8px;
+}
+img {
+    max-width: 100%;
+}
