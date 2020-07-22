@@ -79,6 +79,25 @@ h2{
     
     margin-bottom: 18px;
 }
+#contact h2{
+    border-bottom: 25px solid #852C84;
+    width: 1170px;
+    margin-bottom: 10px;
+}
+.col-md-4{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 .enlaces{
     
     color: white;
