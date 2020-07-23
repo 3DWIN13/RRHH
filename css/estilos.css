@@ -98,6 +98,15 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+.login{
+    background: #E0D1D1;
+    width: 450px;
+    padding: 48px 40px 36px;
+    box-sizing: inherit;
+    height: 505px;
+    
+
+}
 .enlaces{
     
     color: white;
