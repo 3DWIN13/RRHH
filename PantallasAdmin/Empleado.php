@@ -1,17 +1,39 @@
 <!--
-=========================================================
-* Paper Dashboard 2 - v2.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-2
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  
 -->
+
+<?php
+
+require('../librerias/motor.php');
+
+
+if ($_POST) {
+  # code...
+  $e= new stdClass;
+ 
+
+  $e->Nombres = $_POST['Nombres'];
+  $e->Apellidos = $_POST['Apellidos'];
+  $e->Telefonos = $_POST['Telefonos'];
+  $e->Correos = $_POST['Correos'];
+  $e->Puestos = $_POST['Puestos'];
+
+  /* guardamos imagenes */
+  $nombreimg=$_FILES['Fotos']['name'];
+  $archivo = $_FILES['Fotos']['tmp_name'];
+
+  $ruta = "ImagenesBD";
+
+  $ruta = "../".$ruta."/".$nombreimg;
+
+  move_uploaded_file($archivo,$ruta);
+  $e->Fotos = $ruta;
+
+  GuardarEmpleados($e);
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,24 +164,24 @@ Coded by www.creative-tim.com
             <h5 class="card-title">Agregar Empleado</h5>
           </div>
           <div class="card-body">
-            <form>
+            <form method="POST" action="#" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-5 pr-1">
                   <div class="form-group">
                     <label>Puesto</label>
-                    <input type="text" class="form-control"  placeholder="Desarrollador" value="">
+                    <input type="text" name="Puestos" id="Puestos" class="form-control"  placeholder="Desarrollador" value="">
                   </div>
                 </div>
                 <div class="col-md-3 px-1">
                   <div class="form-group">
                     <label>Telefono</label>
-                    <input type="text" class="form-control" placeholder="809-646-6546" value="">
+                    <input type="text" name="Telefonos" id="Telefonos" class="form-control" placeholder="809-646-6546" value="">
                   </div>
                 </div>
                 <div class="col-md-4 pl-1">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Correo</label>
-                    <input type="email" class="form-control" placeholder="example@tal.com">
+                    <input type="email" name="Correos" id="Correos" class="form-control" placeholder="example@tal.com">
                   </div>
                 </div>
               </div>
@@ -167,25 +189,26 @@ Coded by www.creative-tim.com
                 <div class="col-md-6 pr-1">
                   <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" class="form-control" placeholder="Name" value="">
+                    <input type="text" class="form-control" name="Nombres" id="Nombres" placeholder="Name" value="">
                   </div>
                 </div>
                 <div class="col-md-6 pl-1">
                   <div class="form-group">
                     <label>Apellido</label>
-                    <input type="text" class="form-control" placeholder="Last Name" value="">
+                    <input type="text" class="form-control" name="Apellidos" id="Apellidos" placeholder="Last Name" value="">
                   </div>
                 </div>
               </div>
               
+              
               <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+                <input type="file"  class="custom-file-input" id="customFileLang" name="Fotos"  lang="es">
+                <label class="custom-file-label"  for="customFileLang">Seleccionar imagen</label>
               </div>
                 
               <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary btn-round">Agregar Empleado</button>
+                  <button type="submit" name="Guardar" id="Guardar" class="btn btn-primary btn-round">Agregar Empleado</button>
                 </div>
               </div>
             </form>
@@ -197,19 +220,25 @@ Coded by www.creative-tim.com
 
       <div class="content">
         <div class="row">
+        <?php
+        $eso = MostrarEmpleados();
+
+foreach ($eso as $key) {
+  # code...
+        ?>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-globe text-warning"></i>
+                      <img src="<?= $key['Fotos'] ?>" alt="">
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Capacity</p>
-                      <p class="card-title">150GB<p>
+                      <p class="card-category"><?= $key['Nombres'] ?></p>
+                      <p class="card-title"><?= $key['Apellidos'] ?><p>
                     </div>
                   </div>
                 </div>
@@ -223,85 +252,7 @@ Coded by www.creative-tim.com
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-money-coins text-success"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Revenue</p>
-                      <p class="card-title">$ 1,345<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-calendar-o"></i>
-                  Last day
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-vector text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Errors</p>
-                      <p class="card-title">23<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-clock-o"></i>
-                  In the last hour
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-favourite-28 text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Followers</p>
-                      <p class="card-title">+45K<p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i>
-                  Update now
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<?php } ?>        
         
             <div class="credits ml-auto">
               <span class="copyright">
