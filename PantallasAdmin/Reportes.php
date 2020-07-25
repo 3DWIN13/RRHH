@@ -1,3 +1,8 @@
+<?php
+
+require('../librerias/motor.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,66 +126,101 @@
       <!-- End Navbar -->
 
       <!-- formulario agregar empleados -->
-<br><br><br>
+<br><br><br><br>
       <div class="col-md-8">
         <div class="card card-user">
           <div class="card-header">
-            <h5 class="card-title">Agregar Empleado</h5>
+            <h5 class="card-title">Filtrar Reportes</h5>
           </div>
           <div class="card-body">
             <form method="POST" action="#" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-5 pr-1">
-                  <div class="form-group">
-                    <label>Puesto</label>
-                    <input type="text"  name="Puestos" id="Puestos" class="form-control"  placeholder="Desarrollador" value="">
-                  </div>
+                <label for="inputState">Secciona</label>
+      <select id="inputState" class="form-control">
+        <option selected>Nombre</option>
+        <option>Apellido</option>
+        <option>Puesto</option>
+        
+      </select>
                 </div>
                 <div class="col-md-3 px-1">
                   <div class="form-group">
-                    <label>Telefono</label>
-                    <input type="text" name="Telefonos" id="Telefonos" class="form-control" placeholder="809-646-6546" value="">
+                    <label>Buscar</label>
+                    <input type="text" name="buscar" id="buscar" class="form-control" placeholder="Fulanito.." value="">
                   </div>
                 </div>
                 <div class="col-md-4 pl-1">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Correo</label>
-                    <input type="email" required name="Correos" id="Correos" class="form-control" placeholder="example@tal.com">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 pr-1">
-                  <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" required class="form-control" name="Nombres" id="Nombres" placeholder="Name" value="">
-                  </div>
-                </div>
-                <div class="col-md-6 pl-1">
-                  <div class="form-group">
-                    <label>Apellido</label>
-                    <input type="text" required class="form-control" name="Apellidos" id="Apellidos" placeholder="Last Name" value="">
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="custom-file">
-                <input type="file"  class="custom-file-input" id="customFileLang" name="Fotos"  lang="es">
-                <label class="custom-file-label"  for="customFileLang">Seleccionar imagen</label>
-              </div>
-                
-              <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <button type="submit" name="Guardar" id="Guardar" class="btn btn-primary btn-round">Agregar Empleado</button>
+                  <button style="margin-top:23px" type="submit" name="b" id="b" class="btn btn-primary btn-round">Buscar</button>
+                </div>
                 </div>
               </div>
+             
             </form>
           </div>
         </div>
       </div>
 
  <!-- fin formulario agregar empleados -->
+
+
+ <div class="content">
+        <div class="row">
+ 
+ <?php
+ 
+ $l = MostrarEmpleados();
+
+ foreach ($l as $key) {
+   # code...
+ ?>
+ <div class="col-md-4">
+            <div class="card card-user">
+              <div class="image">
+                <img src="<?= $key['Fotos'] ?>" alt="" >
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <br><br><br><br>
+                  <a href="#">
+                    
+                    <h5 class="title"><?= $key['Nombres'] ?></h5>
+                  </a>
+                  <p class="description">
+                  <?= $key['Apellidos'] ?>
+                  </p>
+                </div>
+                <p class="description text-center">
+                  <?= $key['Puestos'] ?> <br>
+                  <?= $key['Telefonos'] ?> <br>
+                  <?= $key['Correos'] ?>
+                </p>
+              </div>
+              <div class="card-footer">
+                <hr>
+                <div class="button-container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6 ml-auto">
+                      <h5>12<br><small>Files</small></h5>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+                      <h5>2GB<br><small>Used</small></h5>
+                    </div>
+                    <div class="col-lg-3 mr-auto">
+                      <h5>24,6$<br><small>Spent</small></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+<?php } ?>
+ </div>
+ </div>
+
+<!-- diviciones -->
 
             <div class="credits ml-auto">
               <span class="copyright">

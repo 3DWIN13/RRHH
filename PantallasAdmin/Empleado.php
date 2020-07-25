@@ -181,7 +181,7 @@ if (isset($_POST['delete'])) {
       <!-- End Navbar -->
 
       <!-- formulario agregar empleados -->
-<br><br><br>
+<br><br><br><br>
       <div class="col-md-8">
         <div class="card card-user">
           <div class="card-header">
