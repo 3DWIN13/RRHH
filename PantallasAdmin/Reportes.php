@@ -1,63 +1,3 @@
-<!--
-  
--->
-
-<?php
-
-require('../librerias/motor.php');
-
-
-
-if (isset($_POST['Guardar'])) {
-  # code...
-  $e= new stdClass;
- 
-
-  $e->Nombres = $_POST['Nombres'];
-  $e->Apellidos = $_POST['Apellidos'];
-  $e->Telefonos = $_POST['Telefonos'];
-  $e->Correos = $_POST['Correos'];
-  $e->Puestos = $_POST['Puestos'];
-
-  /* guardamos imagenes */
-  $nombreimg=$_FILES['Fotos']['name'];
-  $archivo = $_FILES['Fotos']['tmp_name'];
-
-  $ruta = "ImagenesBD";
-
-  $ruta = "../".$ruta."/".$nombreimg;
-
-  move_uploaded_file($archivo,$ruta);
-  $e->Fotos = $ruta;
-
-  GuardarEmpleados($e);
-
-  $parte1 = substr($_POST['Apellidos'], 0, 1);
-  $parte2 = $_POST['Nombres'];
-  $user = $parte2.$parte1;
-  $pass = $user;
-
-  $a = new stdClass;
-  $a->user=$user;
-  $a->pass = $pass;
-  $a->admin = 0;
-
-  GuardarDatosEntradas($a);
-}
-
-if (isset($_POST['delete'])) {
-  # code...
-  BorrarEmpleados($_POST["delete"]); 
-
-
-  $parte1 = substr($_POST['apellido'], 0, 1);
-  $parte2 = $_POST['nombre'];
-  $user = $parte2.$parte1;
-
-  BorrarDatosEntradas($user);
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,14 +39,14 @@ if (isset($_POST['delete'])) {
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
-            <a href="#">
+          <li >
+            <a href="Empleado.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Empleados</p>
             </a>
           </li>
-          <li>
-            <a href="Reportes.php">
+          <li class="active ">
+            <a href="#">
               <i class="nc-icon nc-bell-55"></i>
               <p>Reportes</p>
             </a>
@@ -241,46 +181,7 @@ if (isset($_POST['delete'])) {
       </div>
 
  <!-- fin formulario agregar empleados -->
-<form action="#" method="post">
-      <div class="content">
-        <div class="row">
-        <?php
-        $eso = MostrarEmpleados();
 
-foreach ($eso as $key) {
-  # code...
-        ?>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <img src="<?= $key['Fotos'] ?>" alt="">
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category"><?= $key['Nombres'] ?></p>
-                      <p class="card-title"><?= $key['Apellidos'] ?><p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-address-card"></i>
-                  <?= $key['Correos'] ?>
-                  <button class="btn btn-link" type="submit" name="delete" id="delete" value="<?= $key['id'] ?>" style="margin-left: 20px" ><i class="fa fa-trash-o"></i></button>
-                </div>
-               <input type="hidden" name="nombre" id="nombre" value="<?= $key['Nombres'] ?>">
-               <input type="hidden" name="apellido" id="apellido" value="<?= $key['Apellidos'] ?>">
-              </div>
-            </div>
-          </div>
-<?php } ?>        
-</form>
             <div class="credits ml-auto">
               <span class="copyright">
                 

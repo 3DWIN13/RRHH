@@ -1,3 +1,12 @@
+<?php
+require('librerias/motor.php');
+session_start();
+/* if (!empty($_SESSION['user_id'])) {
+  # code...
+  header("Location: servicios.html");
+} */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,8 +125,35 @@
         
           
           </div>
+
+          <?php
+          if (isset($_POST['login'])) {
+            # code...
+
+          $enter = Login($_POST['user']);
+          if($enter->admin==1 && $enter->pass==$_POST['pass']){
+            echo'<script> location.replace("PantallasAdmin/Empleado.php"); </script>';
+            
+          }else if(count($enter)>0 && $enter->pass == $_POST['pass']) {
+            # code...
+            $_SESSION['user_id']= $enter->id;
+            //echo $_SESSION['user_id'];
+            echo'<script> location.replace("servicios.html"); </script>';
+          
+        }else{
+          echo' <div class="alert alert-danger alert-dismissible fade show">
+          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+            <i class="nc-icon nc-simple-remove"></i>
+          </button>
+          <span><b> Error - </b> Ingrese los datos correctamente</span>
+        </div> ';
+        }
+
+          }
+          ?>
+
          <br>
-     <form>
+     
        <div class="container login">
          <h3 style="font-family: Georgia; color: #852C84;">Te damos la BIENVENIDA</h3> 
          <img src="img/iconos.svg"  style="margin: -20px -50px; 
@@ -125,19 +161,17 @@
          top:50%; 
          left:55%;" height="45" width="45" alt="">
 <p>Para continuar, ingresa tus informaciones.</p>
-
-<input class="form-control mr-sm-2" type="text" placeholder="Usuario..." aria-label="Search" style="width: 358px; height: 30px; border-radius: 10px;">
+<form action="#" method="post">
+<input class="form-control mr-sm-2" type="text" name="user" id="user" placeholder="Usuario..." aria-label="Search" style="width: 358px; height: 30px; border-radius: 10px;">
 <br>
-<input class="form-control mr-sm-2" type="password" placeholder="Contraseña..." aria-label="Search" style="width: 358px; height: 30px; border-radius: 10px;">
-<br>
-<a href="Index.html" class="text-mute">¿Olvidaste tu contraseña?</a>
+<input class="form-control mr-sm-2" type="password" name="pass" id="pass" placeholder="Contraseña..." aria-label="Search" style="width: 358px; height: 30px; border-radius: 10px;">
 <br>
 <br>
 <br>
-<button class="submit button">Iniciar sesión</button>
+<br>
+<button class="submit button" name="login" id="login" type="submit">Iniciar sesión</button>
        </div>
-       
-     </form>
+      </form>
     </div>
 </div>  
   
