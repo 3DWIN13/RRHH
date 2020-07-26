@@ -55,3 +55,59 @@ function BorrarDatosEntradas($elid){
     conexion::consulta($sql);
 }
 
+function FiltrarDatosNombres($datos){
+
+    $sql = "SELECT * FROM `empleados` WHERE Nombres = '{$datos}'";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]=$fila;
+    }
+    return $final;
+
+
+}
+
+function FiltrarDatosApellidos($datos){
+
+    $sql = "SELECT * FROM `empleados` WHERE Apellidos = '{$datos}'";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]=$fila;
+    }
+    return $final;
+
+
+}
+
+function FiltrarDatosPuestos($datos){
+
+    $sql = "SELECT * FROM `empleados` WHERE Puestos = '{$datos}'";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]=$fila;
+    }
+    return $final;
+
+
+}
+
+function ReportesDatos($id){
+
+    $sql = "SELECT * FROM `empleados` WHERE id = '{$id}'";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]=$fila;
+    }
+    return $final;
+
+
+}
+

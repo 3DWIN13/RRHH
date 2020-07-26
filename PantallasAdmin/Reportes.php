@@ -133,14 +133,14 @@ require('../librerias/motor.php');
             <h5 class="card-title">Filtrar Reportes</h5>
           </div>
           <div class="card-body">
-            <form method="POST" action="#" enctype="multipart/form-data">
+            <form method="POST" action="#">
               <div class="row">
                 <div class="col-md-5 pr-1">
                 <label for="inputState">Secciona</label>
-      <select id="inputState" class="form-control">
-        <option selected>Nombre</option>
-        <option>Apellido</option>
-        <option>Puesto</option>
+      <select id="inputState" name="select" class="form-control">
+        <option  value="nombre" >Nombre</option>
+        <option value="apellido" >Apellido</option>
+        <option value="puesto" >Puesto</option>
         
       </select>
                 </div>
@@ -156,7 +156,11 @@ require('../librerias/motor.php');
                 </div>
                 </div>
               </div>
-             
+              <div class="row">
+                <div class="update ml-auto mr-auto">
+                  <button type="button" onclick="location.href='PlantillaPdf.php'" name="Reportes" id="Reportes" class="btn btn-primary btn-round">Reportes de todos los Empleados</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -164,14 +168,30 @@ require('../librerias/motor.php');
 
  <!-- fin formulario agregar empleados -->
 
+<?php
 
+$l = MostrarEmpleados();
+if (isset($_POST['b']) && $_POST['select']=="nombre") {
+  
+    $l= FiltrarDatosNombres($_POST['buscar']);
+  }
+  
+elseif(isset($_POST['b']) && $_POST['select']=="apellido"){
+   $l= FiltrarDatosApellidos($_POST['buscar']);
+   
+ }
+ elseif (isset($_POST['b']) && $_POST['select']=="puesto") {
+   # code...
+   $l= FiltrarDatosPuestos($_POST['buscar']);
+ }
+ 
+
+
+?>
  <div class="content">
         <div class="row">
  
  <?php
- 
- $l = MostrarEmpleados();
-
  foreach ($l as $key) {
    # code...
  ?>
@@ -201,14 +221,8 @@ require('../librerias/motor.php');
                 <hr>
                 <div class="button-container">
                   <div class="row">
-                    <div class="col-lg-3 col-md-6 col-6 ml-auto">
-                      <h5>12<br><small>Files</small></h5>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
-                      <h5>2GB<br><small>Used</small></h5>
-                    </div>
-                    <div class="col-lg-3 mr-auto">
-                      <h5>24,6$<br><small>Spent</small></h5>
+                  <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+                    <button type="button" onclick="location.href='PdfIndividual.php?id=<?= $key['id'] ?>'" class="btn btn-primary btn-round" >Imprimir</button>
                     </div>
                   </div>
                 </div>
