@@ -112,7 +112,7 @@ if (isset($_POST['delete'])) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="Capacitaciones.php">
               <i class="nc-icon nc-diamond"></i>
               <p>Capacitaciones</p>
             </a>

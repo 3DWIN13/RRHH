@@ -7,6 +7,13 @@ function GuardarEmpleados($empleados){
     conexion::consulta($sql);
 }
 
+function GuardarCapacitaciones($Capa){
+    $sql="INSERT INTO `capacitaciones`(`Nombres`, `Fechas`, `Duracion`, `Horarios`, `Descripciones`, `Fotos`)
+    VALUES ('{$Capa->Nombres}', '{$Capa->Fechas}', '{$Capa->Duracion}', '{$Capa->Horarios}', '{$Capa->Descripciones}', '{$Capa->Fotos}')";
+
+    conexion::consulta($sql);
+}
+
 function GuardarDatosEntradas($datos){
     $sql="INSERT INTO datosentradas (user, pass, admin)
     VALUES ('{$datos->user}', '{$datos->pass}', '{$datos->admin}')";
@@ -17,6 +24,17 @@ conexion::consulta($sql);
 
 function MostrarEmpleados(){
     $sql = "SELECT * FROM empleados";
+    $rs = conexion::consulta($sql);
+
+    $final=[];
+    while($fila = mysqli_fetch_assoc($rs)){
+        $final[]=$fila;
+    }
+    return $final;
+}
+
+function MostrarCapacitaciones(){
+    $sql = "SELECT * FROM capacitaciones";
     $rs = conexion::consulta($sql);
 
     $final=[];
@@ -45,6 +63,13 @@ function Login($user){
 function BorrarEmpleados($elid){
 
     $sql = "DELETE FROM empleados WHERE id = '{$elid}'";
+
+    conexion::consulta($sql);
+}
+
+function BorrarCapacitaciones($elid){
+
+    $sql = "DELETE FROM capacitaciones WHERE id = '{$elid}'";
 
     conexion::consulta($sql);
 }

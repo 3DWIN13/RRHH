@@ -1,6 +1,44 @@
+<!--
+  `Nombres`, `Fechas`, `Duracion`, `Horarios`, `Descripciones`, `Fotos`
+-->
+
 <?php
 
 require('../librerias/motor.php');
+
+
+
+if (isset($_POST['Guardar'])) {
+  # code...
+  $e= new stdClass;
+ 
+
+  $e->Nombres = $_POST['Nombres'];
+  $e->Fechas = $_POST['Fechas'];
+  $e->Duracion = $_POST['Duracion'];
+  $e->Horarios = $_POST['Horarios'];
+  $e->Descripciones = $_POST['Descripciones'];
+
+  /* guardamos imagenes */
+  $nombreimg=$_FILES['Fotos']['name'];
+  $archivo = $_FILES['Fotos']['tmp_name'];
+
+  $ruta = "ImagenesBD/ImagenesCP";
+
+  $ruta = "../".$ruta."/".$nombreimg;
+
+  move_uploaded_file($archivo,$ruta);
+  $e->Fotos = $ruta;
+
+  GuardarCapacitaciones($e);
+
+}
+
+if (isset($_POST['borrar'])) {
+  # code...
+  BorrarCapacitaciones($_POST["borrar"]); 
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +52,8 @@ require('../librerias/motor.php');
   <title>
     Admin
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -44,20 +83,20 @@ require('../librerias/motor.php');
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li >
+          <li>
             <a href="Empleado.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Empleados</p>
             </a>
           </li>
-          <li class="active ">
-            <a href="#">
+          <li>
+            <a href="Reportes.php">
               <i class="nc-icon nc-bell-55"></i>
               <p>Reportes</p>
             </a>
           </li>
-          <li>
-            <a href="Capacitaciones.php">
+          <li class="active ">
+            <a href="#">
               <i class="nc-icon nc-diamond"></i>
               <p>Capacitaciones</p>
             </a>
@@ -68,8 +107,8 @@ require('../librerias/motor.php');
               <p>Pagina Empleados</p>
             </a>
           </li>
-         
-         
+
+
         </ul>
       </div>
     </div>
@@ -87,7 +126,8 @@ require('../librerias/motor.php');
             </div>
             <a class="navbar-brand" href="javascript:;">Control de administrador</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -102,11 +142,12 @@ require('../librerias/motor.php');
                   </div>
                 </div>
               </div>
-              </form>
+            </form>
             <ul class="navbar-nav">
-              
+
               <li class="nav-item btn-rotate dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="nc-icon nc-bell-55"></i>
                   <p>
                     <span class="d-lg-none d-md-block">Some Actions</span>
@@ -118,7 +159,7 @@ require('../librerias/motor.php');
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              
+
             </ul>
           </div>
         </div>
@@ -126,39 +167,62 @@ require('../librerias/motor.php');
       <!-- End Navbar -->
 
       <!-- formulario agregar empleados -->
-<br><br><br><br>
+      <br><br><br><br>
       <div class="col-md-8">
         <div class="card card-user">
           <div class="card-header">
-            <h5 class="card-title">Filtrar Reportes</h5>
+            <h5 class="card-title">Agregar Capasitaciones</h5>
           </div>
+          
           <div class="card-body">
-            <form method="POST" action="#">
+            <form method="POST" action="#" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-5 pr-1">
-                <label for="inputState">Secciona</label>
-      <select id="inputState" name="select" class="form-control">
-        <option  value="nombre" >Nombre</option>
-        <option value="apellido" >Apellido</option>
-        <option value="puesto" >Puesto</option>
-        
-      </select>
+                  <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="Nombres" id="Nombres" class="form-control" placeholder="Nombre del evento"
+                      value="">
+                  </div>
                 </div>
                 <div class="col-md-3 px-1">
                   <div class="form-group">
-                    <label>Buscar</label>
-                    <input type="text" name="buscar" id="buscar" class="form-control" placeholder="Fulanito.." value="">
+                    <label>Fecha</label>
+                    <input type="text" name="Fechas" id="Fechas" class="form-control" placeholder="Fecha de inicio"
+                      value="">
                   </div>
                 </div>
                 <div class="col-md-4 pl-1">
-                <div class="update ml-auto mr-auto">
-                  <button style="margin-top:23px" type="submit" name="b" id="b" class="btn btn-primary btn-round">Buscar</button>
-                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Duracion</label>
+                    <input type="text" required name="Duracion" id="Duracion" class="form-control"
+                      placeholder="Duracion del evento">
+                  </div>
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Horario</label>
+                    <input type="text" required class="form-control" name="Horarios" id="Horarios" placeholder="horario de asistensia"
+                      value="">
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFileLang" name="Fotos" lang="es">
+                    <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripcion</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="Descripciones" rows="5"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
                 <div class="update ml-auto mr-auto">
-                  <button type="button" onclick="location.href='PlantillaPdf.php'" name="Reportes" id="Reportes" class="btn btn-primary btn-round">Reportes de todos los Empleados</button>
+                  <button type="submit" name="Guardar" id="Guardar" class="btn btn-primary btn-round">Agregar
+                    Capasitacion</button>
                 </div>
               </div>
             </form>
@@ -166,85 +230,70 @@ require('../librerias/motor.php');
         </div>
       </div>
 
- <!-- fin formulario agregar empleados -->
+      <!-- fin formulario agregar empleados -->
+      <form action="#" method="post">
+        <div class="content">
+          <div class="col-md-8">
 
-<?php
+          <?php
+          
+          $la = MostrarCapacitaciones();
+          
+          foreach ($la as $key) {
+            # code...
+          ?>
 
-$l = MostrarEmpleados();
-if (isset($_POST['b']) && $_POST['select']=="nombre") {
-  
-    $l= FiltrarDatosNombres($_POST['buscar']);
-  }
-  
-elseif(isset($_POST['b']) && $_POST['select']=="apellido"){
-   $l= FiltrarDatosApellidos($_POST['buscar']);
-   
- }
- elseif (isset($_POST['b']) && $_POST['select']=="puesto") {
-   # code...
-   $l= FiltrarDatosPuestos($_POST['buscar']);
- }
- 
-
-
-?>
- <div class="content">
-        <div class="row">
- 
- <?php
- foreach ($l as $key) {
-   # code...
- ?>
- <div class="col-md-4">
             <div class="card card-user">
-              <div class="image">
-                <img src="<?= $key['Fotos'] ?>" alt="" >
+              <div class="card-header">
+                <div class="row">
+                <h5 style="margin-left: 2%;" class="card-title"><?= $key['Nombres'] ?></h5>
+                <button class="btn btn-primary" type="submit" name="borrar" id=" borrar"  value="<?= $key['id'] ?>"  style="margin-left: 60%;">x</button>
+              </div>
               </div>
               <div class="card-body">
-                <div class="author">
-                  <br><br><br><br>
-                  <a href="#">
-                    
-                    <h5 class="title"><?= $key['Nombres'] ?></h5>
-                  </a>
-                  <p class="description">
-                  <?= $key['Apellidos'] ?>
-                  </p>
-                </div>
-                <p class="description text-center">
-                  <?= $key['Puestos'] ?> <br>
-                  <?= $key['Telefonos'] ?> <br>
-                  <?= $key['Correos'] ?>
-                </p>
-              </div>
-              <div class="card-footer">
-                <hr>
-                <div class="button-container">
-                  <div class="row">
-                  <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
-                    <button type="button" onclick="location.href='PdfIndividual.php?id=<?= $key['id'] ?>'" class="btn btn-primary btn-round" >Imprimir</button>
+                <div class="row">
+                  <div class="col-md-5">
+                    <img src="<?= $key['Fotos'] ?>" alt="#" width="260" height="165">
+                  </div>
+
+                  <div class="col-md-5 px-1 py-4">
+                    <div class="form-group">
+                      <?= $key['Descripciones'] ?>. <br /> Esta Capasitacion iniciara <?= $key['Fechas']?> y  tendra una duracione de <?= $key['Duracion'] ?> 
                     </div>
                   </div>
                 </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                  <div style="margin-left:75%" class="form-group">
+                    Partisipantes 3
+                  </div>
+                </div>
+                </div>
+
+
+
+
+
               </div>
-              
             </div>
-          </div>
-<?php } ?>
- </div>
- </div>
 
-<!-- diviciones -->
+          <?php } ?>
 
-            <div class="credits ml-auto">
-              <span class="copyright">
-                
-              </span>
-            </div>
           </div>
         </div>
-      </footer>
     </div>
+
+    </form>
+    <div class="credits ml-auto">
+      <span class="copyright">
+
+      </span>
+    </div>
+  </div>
+  </div>
+  </footer>
+  </div>
   </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
@@ -258,10 +307,11 @@ elseif(isset($_POST['b']) && $_POST['select']=="apellido"){
   <!--  Notifications Plugin    -->
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
       demo.initChartsPages();
     });
