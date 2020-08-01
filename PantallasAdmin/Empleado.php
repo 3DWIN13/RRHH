@@ -118,7 +118,7 @@ if (isset($_POST['delete'])) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="../PantallaEmpleado.php">
               <i class="nc-icon nc-bell-55"></i>
               <p>Pagina Empleados</p>
             </a>

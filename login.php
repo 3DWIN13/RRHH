@@ -148,7 +148,7 @@ session_start();
             # code...
             $_SESSION['user_id']= $enter->id;
             //echo $_SESSION['user_id'];
-            echo'<script> location.replace("servicios.html"); </script>';
+            echo'<script> location.replace("PantallaEmpleado.php"); </script>';
           
         }else{
           echo' <div class="alert alert-danger alert-dismissible fade show">

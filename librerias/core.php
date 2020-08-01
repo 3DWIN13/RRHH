@@ -136,3 +136,17 @@ function ReportesDatos($id){
 
 }
 
+function Estatus($eso){
+
+    $sql="UPDATE DatosEntradas SET Estatus='{$eso->Estatus}'";
+        conexion::consulta($sql);
+
+}
+
+function Inscrision($eso){
+
+    $sql="UPDATE Capacitaciones SET Inscritos='{$eso->Inscritos}' WHERE id='{$eso->id}'";
+        conexion::consulta($sql);
+
+}
+

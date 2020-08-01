@@ -102,7 +102,7 @@ if (isset($_POST['borrar'])) {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="../PantallaEmpleado.php">
               <i class="nc-icon nc-bell-55"></i>
               <p>Pagina Empleados</p>
             </a>
@@ -134,31 +134,11 @@ if (isset($_POST['borrar'])) {
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="nc-icon nc-zoom-split"></i>
-                  </div>
-                </div>
-              </div>
+              
             </form>
             <ul class="navbar-nav">
 
-              <li class="nav-item btn-rotate dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="nc-icon nc-bell-55"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
+             
 
             </ul>
           </div>
@@ -247,7 +227,7 @@ if (isset($_POST['borrar'])) {
               <div class="card-header">
                 <div class="row">
                 <h5 style="margin-left: 2%;" class="card-title"><?= $key['Nombres'] ?></h5>
-                <button class="btn btn-primary" type="submit" name="borrar" id=" borrar"  value="<?= $key['id'] ?>"  style="margin-left: 60%;">x</button>
+               
               </div>
               </div>
               <div class="card-body">
@@ -264,9 +244,12 @@ if (isset($_POST['borrar'])) {
                 </div>
 
                 <div class="row">
-                  <div class="col-md-12">
-                  <div style="margin-left:75%" class="form-group">
-                    Partisipantes 3
+                  <div class= "col-md-6">
+                  <button class="btn btn-primary" type="submit" name="borrar" id=" borrar"  value="<?= $key['id'] ?>"  style="">x</button>
+                  </div>
+                  <div class="col-md-6 py-3 px-5">
+                  <div style="margin-left:50%" class="form-group">
+                   Participantes <strong> <?= $key['Inscritos'] ?> </strong>
                   </div>
                 </div>
                 </div>

@@ -1,314 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECURSOS HUMANOS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECURSOS HUMANOS</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="fuente.css">
-    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#563d7c">
-    
-    
-        <style>
-          .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-          }
-    
-          @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-              font-size: 3.5rem;
-            }
-          }
-        </style>
-        <!-- Custom styles for this template -->
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="blog.css" rel="stylesheet">
-      </head>
-      <body>
-        <div class="social-bar">
-          <a href="tel:8497635975" class="icon icon-phone" target="_blank"></a>
-          <a href="https://www.facebook.com/Empleos-Disponibles-101515074811719/" class="icon icon-facebook2" target="_blank"></a>
-          <a href="https://www.youtube.com/channel/UCvGbc_ErQWdAMglwJslgVQA" class="icon icon-play" target="_blank"></a>
-          <a href="https://www.instagram.com/totalambitionto/" class="icon icon-instagram" target="_blank"></a>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="fuente.css">
+  <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#563d7c">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
+
+  <script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+  <script type="text/javascript" src="jquery-ui.js"></script>
+</head>
+
+<body>
+  <div class="social-bar">
+    <a href="tel:8497635975" class="icon icon-phone" target="_blank"></a>
+    <a href="https://www.facebook.com/Empleos-Disponibles-101515074811719/" class="icon icon-facebook2"
+      target="_blank"></a>
+    <a href="https://www.youtube.com/channel/UCvGbc_ErQWdAMglwJslgVQA" class="icon icon-play" target="_blank"></a>
+    <a href="https://www.instagram.com/totalambitionto/" class="icon icon-instagram" target="_blank"></a>
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=18296929207&text=Enviar%20mensaje%20a%20la%20empresa%20de%20Recursos%20Humanos%20TOTAL%20AMBITION%20TO%20LEARN."
+    target="_blank"><button id="startChat" class="buttonReady" style="background-color: rgb(187, 26, 26);"><svg
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+        y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+        <g id="chaticon">
+          <path
+            d="M484.5,102h-51v229.5H102v51c0,15.3,10.2,25.5,25.5,25.5H408l102,102V127.5C510,112.2,499.8,102,484.5,102z M382.5,255    V25.5C382.5,10.2,372.3,0,357,0H25.5C10.2,0,0,10.2,0,25.5v357l102-102h255C372.3,280.5,382.5,270.3,382.5,255z"
+            style="fill: rgb(241, 242, 235);"></path>
+        </g>
+      </svg></button></a> <!-- DIV PRINCIPAL -->
+  <div id="primero" class="container">
+    <header class="blog-header py-3">
+
+      <!-- LOGO -->
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <img src="img/logo.jpg" height="150" width="300" alt="">
+          <!-- NOMBRE EMPRESA-->
         </div>
-        <a href="https://api.whatsapp.com/send?phone=18296929207&text=Enviar%20mensaje%20a%20la%20empresa%20de%20Recursos%20Humanos%20TOTAL%20AMBITION%20TO%20LEARN." target="_blank"><button id="startChat" class="buttonReady" style="background-color: rgb(187, 26, 26);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
-                     <g id="chaticon">
-                       <path d="M484.5,102h-51v229.5H102v51c0,15.3,10.2,25.5,25.5,25.5H408l102,102V127.5C510,112.2,499.8,102,484.5,102z M382.5,255    V25.5C382.5,10.2,372.3,0,357,0H25.5C10.2,0,0,10.2,0,25.5v357l102-102h255C372.3,280.5,382.5,270.3,382.5,255z" style="fill: rgb(241, 242, 235);"></path>
-                     </g>
-                   </svg></button></a>      <!-- DIV PRINCIPAL -->
-        <div id="primero" class="container">
-      <header class="blog-header py-3">
-        
-        <!-- LOGO -->
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4 pt-1">
-            <img src="img/logo.jpg"  height="150" width="300" alt="">
-           <!-- NOMBRE EMPRESA-->
-          </div>
 
-          <!-- ESCUDO -->
-          <div class="col-4 text-center">
-           <!--  <a class="blog-header-logo text-dark" href="#">Large</a> -->
-          </div>
-          <div class="col-4 d-flex justify-content-end align-items-center">
+        <!-- ESCUDO -->
+        <div class="col-4 text-center">
+          <!--  <a class="blog-header-logo text-dark" href="#">Large</a> -->
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
 
-            <!--BARRA DE NAVEGACION -->
-              <div class="form-group">
+          <!--BARRA DE NAVEGACION -->
+          <div class="form-group">
             <img src="img/escudo.svg" alt="" height="60" width="250">
-                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" style="width: 250px; height: 30px; border-radius: 10px;">
-           
-            <a href="Index.html" class="text-mute">INICIO</a>&nbsp;|&nbsp;<a href="contacto.html" class="text-mute">CONTACTOS</a>&nbsp;|&nbsp;<a href="login.php" class="text-mute">LOGIN</a>
-            </div>
+            <input id="tag" class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" style="width: 250px; height: 30px; border-radius: 10px;">
+
+            <script type="text/javascript">
+
+              $(document).ready(function () {
+                var items = [
+                  "tal y tal",
+                  "pan pan"
+                ];
+
+                $("#tag").autocomplete({
+                  source: items
+                });
+
+              });
+
+            </script>
+
+            
+
+            <a href="Index.html" class="text-mute">INICIO</a>&nbsp;|&nbsp;<a href="contacto.html"
+              class="text-mute">CONTACTOS</a>&nbsp;|&nbsp;<a href="login.php" class="text-mute">LOGIN</a>
           </div>
         </div>
-      </header>
-    
-      <div id="barra" class="nav-scroller py-1 mb-2">
-        <nav class="nav nav-pills nav-justified">
-          <a class="p-2 text-white" style="margin-right: 1%; font-family: Georgia;" href="Index.html">INICIO</a>
-         
-          <a class="nav-link dropdown-toggle"  style="margin-right: 1%; color: white; font-family: Georgia;" href="quienes_somos.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            SOBRE NOSOTROS
+      </div>
+    </header>
+
+    <div id="barra" class="nav-scroller py-1 mb-2">
+      <nav class="nav nav-pills nav-justified">
+        <a class="p-2 text-white" style="margin-right: 1%; font-family: Georgia;" href="Index.html">INICIO</a>
+
+        <a class="nav-link dropdown-toggle" style="margin-right: 1%; color: white; font-family: Georgia;"
+          href="quienes_somos.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          SOBRE NOSOTROS
+        </a>
+        <div class="dropdown-menu" style="background: #852C84;" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;" href="quienes_somos.html">¿QUIÉNES
+            SOMOS?</a>
+
+          <br></br>
+          <a class="dropdown-item-358 p-2 text-white" style="font-family: Georgia;"
+            href="quienes_somos.html">HISTORIA</a>
+          <br></br>
+          <a class="dropdown-item-359 p-2 text-white" style="font-family: Georgia;"
+            href="quienes_somos.html">INTERÉS</a>
+        </div>
+
+        <div>
+          <a class="nav-link dropdown-toggle" style="margin-right: 1%; color : white; font-family: Georgia;"
+            href="servicios.html" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SERVICIOS
           </a>
           <div class="dropdown-menu" style="background: #852C84;" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;" href="quienes_somos.html">¿QUIÉNES SOMOS?</a>
-            
-              <br></br>
-            <a class="dropdown-item-358 p-2 text-white" style="font-family: Georgia;" href="quienes_somos.html">HISTORIA</a>
-          <br></br>
-            <a class="dropdown-item-359 p-2 text-white"style="font-family: Georgia;"  href="quienes_somos.html">INTERÉS</a>
-          </div>
-        
-          <div>
-            <a class="nav-link dropdown-toggle"  style="margin-right: 1%; color : white; font-family: Georgia;" href="servicios.html" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              SERVICIOS
-            </a>
-          <div class="dropdown-menu" style="background: #852C84;" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;" href="servicios.html">CAPACITACIONES</a>
+            <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;"
+              href="servicios.html">CAPACITACIONES</a>
             <br></br>
             <a class="dropdown-item-358 p-2 text-white" style="font-family: Georgia;" href="servicios.html">VACANTES</a>
             <br></br>
-            <a class="dropdown-item-359 p-2 text-white"style="font-family: Georgia;" href="servicios.html">ÁREAS DE TRABAJO</a>
+            <a class="dropdown-item-359 p-2 text-white" style="font-family: Georgia;" href="servicios.html">ÁREAS DE
+              TRABAJO</a>
           </div>
         </div>
         <a class="p-2 text-white" style="margin-right: 1%; font-family: Georgia;" href="#noticia">NOTICIAS</a>
-          <a class="p-2 text-white" style="margin-right: 1%; font-family: Georgia;" target="_blank" href="transparencia.html">TRANSPARENCIA</a>
-          <div>
-            <a class="nav-link dropdown-toggle"  style="margin-right: 1%; color : white; font-family: Georgia;" href="servicios.html" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              DOCUMENTOS DESCARGABLES
-            </a>
+        <a class="p-2 text-white" style="margin-right: 1%; font-family: Georgia;" target="_blank"
+          href="transparencia.html">TRANSPARENCIA</a>
+        <div>
+          <a class="nav-link dropdown-toggle" style="margin-right: 1%; color : white; font-family: Georgia;"
+            href="servicios.html" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            DOCUMENTOS DESCARGABLES
+          </a>
           <div class="dropdown-menu" style="background: #852C84;" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;" target="_blank" href="Manual de usuario.pdf">MANUAL DE USUARIO</a>
-           
+            <a class="dropdown-item-354 p-2 text-white" style="font-family: Georgia;" target="_blank"
+              href="Manual de usuario.pdf">MANUAL DE USUARIO</a>
+
             <br></br>
-            <a class="dropdown-item-358 p-2 text-white" style="font-family: Georgia;"  target="_blank" href="RECOMENDACIONES DEL EQUIPO.pdf">RECOMENDACIONES DEL EQUIPO</a>
-           
+            <a class="dropdown-item-358 p-2 text-white" style="font-family: Georgia;" target="_blank"
+              href="RECOMENDACIONES DEL EQUIPO.pdf">RECOMENDACIONES DEL EQUIPO</a>
+
           </div>
-        </div>        
-          
-          </div>
-         
-          <div id="headerr">
-            <ul>
-              <li><image src="img/img1.jpg" alt=""></li>
-                <li><image src="img/img1.jpg" alt=""></li>  
-              
-              
-            </ul>
-                  </div>
-                  <div class="contenedor">
-                    <div class="item" id="item1">
-                      <h3>COMPROMISO</h3>
-                    </div>
-                    <div class="item" id="item2">
-                      <h3>RESPETO</h3>
-                    </div>
-                    <div class="item" id="item3">
-                      <h3>EXCELENCIA</h3>
-                    </div>
-                    <div class="item" id="item4">
-                      <h3>INNOVACIÓN</h3>
-                    </div>
-                  </div>
-                  <div style="background: white;">
-                    <div class="">
-                      <div class="container" id="noticia" style="background: white;">
-                        <h2 class="blog-post-title" style="color:black;">Noticias del Ámbito Laboral</h2>
-                        <br></br>
-                        <div style class="row">
-                          <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm" style="width: 360px;">
-                              <img src="noticias/noticia1.JPG" height="300" width="350" alt="">     
-                              <a class="mod-articles-category-title " href="https://www.diariolibre.com/economia/el-mercado-laboral-crece-un-175-en-junio-CD20236576" target="_blank" title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19">
-                              El mercado laboral crece un 17.5% en Junio											</a>
-                              <small class="text-muted">20/07/2020</small>
-
-                              <p class="card-text">El reinicio de las actividades económicas en el país permitió que el mercado laboral se recuperara en junio, en comparación con mayo, luego de que se levantaran las restricciones impuestas por el Poder Ejecutivo.</p>   
-                                                          
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm" style="width: 360px;">
-                              <img src="noticias/noticia3.JPG" height="300" width="350" alt="">     
-                              <a class="mod-articles-category-title " href="https://www.diariolibre.com/actualidad/american-airlines-advierte-que-podria-suspender-a-25000-empleados-HF20162324" target="_blank" title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19">
-                             Empresa advierte suspensión de empleados									</a>
-                              <small class="text-muted">20/07/2020</small>
-
-                              <p class="card-text">American Airlines advirtió este miércoles de que podría verse forzada a suspender a 25,000 empleados, lo que supone un 20 % de su plantilla, uniéndose así a United, otra de las aerolíneas principales de Estados Unidos.</p>   
-                                                          
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm" style="width: 360px;">
-                              <img src="noticias/noticia2.JPG" height="300" width="350" alt="">     
-                              <a class="mod-articles-category-title " href="https://www.diariolibre.com/economia/la-tasa-de-empleo-en-los-paises-desarrollados-cae-por-vez-primera-desde-2013-FF20164760" title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19" target="_blank">
-                              La tasa de empleo en los paises desarrollados cae por primera vez desde el 2013										</a>
-                              <small class="text-muted">20/07/2020</small>
-
-                              <p class="card-text">La tasa de empleo en los países desarrollados, que mide la parte de personas en edad de trabajar que tienen un empleo, cayó tres décimas en el primer trimestre de 2020, para situarse en el 68.6 %.</p>   
-                                                          
-                            </div>
-                          </div>
-
-                          
-            <div class="col-sm-10">
-
-              <h2 class="blog-post-title" style="font-family: Georgia;">Enlaces de Interes</h2>
-              <div class="contenedor">
-                <div class="enlaces"><a href="http://dominicana.gob.do/" target="_blank">
-                  <img src="noticias/noticia4.JPG"  alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
-                </a></div>
-                <div class="enlaces"><a href="https://911.gob.do/" target="_blank">
-                  <img src="noticias/noticia5.JPG"  alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
-                </a></div>
-                <div class="enlaces"><a href="https://observatorioserviciospublicos.gob.do/" target="_blank">
-                  <img src="noticias/noticia6.JPG"  alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
-                </a></div>
-                <div class="enlaces"><a href="https://311.gob.do/" target="_blank">
-                  <img src="noticias/noticia7.JPG"  alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
-                </a></div>
-               
-              </div>
-              <div class="col-md-12 columns">
-                <div class="owl-carousel owl-theme owl-loaded owl-drag">
-                                   
-                        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-589px, 0px, 0px); transition: all 0.25s ease 0s; width: 2062px;"><div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="http://www.311.gob.do/" target="_blank" title="Ir a  Sistema Nacional de Atención Ciudadana 3-1-1">                
-                      <div class="item pulse">
-                        <img src="noticias/noticia4.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1" class="img-responsive">
-                      </div>
-                    </a></div><div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="https://911.gob.do/" target="_blank" title="Ir a Sistema Nacional de Atención a Emergencias y Seguridad 9-1-1">                
-                      <div class="item pulse">
-                        <img src="noticias/noticia5.JPG" alt="Sistema Nacional de Atención a Emergencias y Seguridad 9-1-1" class="img-responsive">
-                      </div>
-                    </a></div><div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="https://serviciosrd.gob.do/" target="_blank" title="Ir a Servicios en Línea ">                
-                      <div class="item pulse">
-                        <img src="/images/logos/servicios-en-linea.svg" alt="Servicios en Línea " class="img-responsive">
-                      </div>
-                    </a></div><div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="http://observatorioserviciospublicos.gob.do/" target="_blank" title="Ir a Observatorio Nacional SP">                
-                      <div class="item pulse">
-                        <img src="/images/logos/observatorio.svg" alt="Observatorio Nacional SP" class="img-responsive">
-                      </div>
-                          
-        </nav>
-      </div>
-<br>
-    </br>
-      
-      <div id="logo_pie" style="text-align: center;">
-        <!-- <div class="custom custom_footer" style="width: 24%; display: inline-table;"></div> -->
-        <div style="display: inline-grid;  line-height: 17px;" class="all_footer_m">
-            <span class="logo_pie_m">
-                <div class="custom" style="padding: 2%">
-                    <img class="logo_itla" src="img/escudo.JPG" alt="Escudo Dominicano">
-                </div>
-            </span>
-            <span class="texto3">Total Ambition To Learn</span>
-            <span class="texto">
-                <span class="texto_pie_m">Ensache Quisqueya, Roberto Pastoriza #863.
-                    <br> 
-                    <a href="tel:809-550-0259" style="text-decoration: none;"><i class="fa fa-phone"></i> 849-763-5975</a> <a href="lisbethcorporan01@gmail.com" style="text-decoration: none;"><i class="fa fa-envelope"></i>totalambitiontolearn@gmail.com</a><br>
-                </span>
-                <span class="menu_pie1" style="margin-bottom: 15px">
-                    <a href="Index.html" style="text-decoration: none;">TÉRMINOS DE USO</a> |
-                    <a href="Index.html" style="text-decoration: none;">POLÍTICAS DE PRIVACIDAD</a> |
-                    <a href="Index.html" style="text-decoration: none;">PREGUNTAS FRECUENTES</a>
-                    <br>
-                    © 2020 TODOS LOS DERECHOS RESERVADOS
-                </span>
-                <span class="menu_pie_m">
-                    <a href="Index.html" style="text-decoration: none;">INICIO</a> |
-                    <a href="contacto.html" style="text-decoration: none;">CONTACTO</a>
-                    <br>
-                    <a id="subir" href="" style="text-decoration: none;">SUBIR</a>
-                    <br>
-                    <span><a href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" title="Ver Certificación" target="_blank">Versión móvil certificada bajo la NORTIC A2:2016 <b> 14052-02-A216051 </b></a></span>
-                    <br>
-                    © 2020 TODOS LOS DERECHOS RESERVADOS<br>
-                    REPÚBLICA DOMINICANA
-                </span>
-            </span>
         </div>
 
-        <div class="custom custom_footer">
-            <!-- CÓDIGO DE SELLO NORTIC A2:2016 -->
-            <span id="selloNortic">
-                <a href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" hreflang="es" target="_blank" rel="nofollow" title="Medio web certificado bajo la NORTIC A2:2016 con el NIU 14052-01-A216051">
-                    <img src="img/nortic1.JPG" lang="es" alt="Sello de certificación de la A2:2016 con el NIU 14052-01-A216051">
-                </a>
-            </span>
-            <!-- FIN CÓDIGO DE SELLO NORTIC A2:2016 -->
-            <!-- CÓDIGO DE SELLO NORTIC A3:2014 --> 
-            <span id="selloNortic">
-                <a href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" hreflang="es" target="_blank" rel="nofollow" title="Medio web certificado bajo la NORTIC A3:2014 con el NIU 14052-02-A314062">
-                    <img src="img/nortic2.JPG" lang="es" alt="Sello de certificación de la A3:2014 con el NIU 14052-02-A314062">
-                </a>
-            </span>
-            <!-- FIN CÓDIGO DE SELLO NORTIC A3:2014 -->
-
-            <!-- CÓDIGO  DE SELLO NORTIC A5:2015 --> 
-            <span id="selloNortic">
-                <a title="Medio web certificado bajo la NORTIC A5:2015 con el NIU 14052-02-A519008" href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
-                    <img lang="es" src="img/nortic3.JPG" alt="Sello de certificación de la A5:2015 con el NIU 14052-02-A519008">
-                </a>
-            </span>
-            <!-- FIN CÓDIGO DE SELLO NORTIC A5:2015 -->
-            <!-- CÓDIGO  DE SELLO NORTIC E1:2014 --> 
-            <span id="selloNortic">
-                <a title="Medio web certificado bajo la NORTIC E1:2014 con el NIU 14052-02-E114131" href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
-                    <img lang="es" src="img/nortic 4.JPG" alt="Sello de certificación de la E1:2014 con el NIU 14052-02-E114131">
-                </a>
-            </span>
-            <!-- FIN CÓDIGO DE SELLO NORTIC E1:2014 -->
-            <!-- CÓDIGO DE SELLO NORTIC A4:2014 --> 
-            <span id="selloNortic">
-                <a title="Medio web certificado bajo la NORTIC A4:2014 con el NIU 14052-01-A414026" href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto" hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
-                    <img lang="es" src="img/nortic5.JPG" alt="Sello de certificación de la A4:2014 con el NIU 14052-01-A414026">
-                </a>
-            </span>
-            <!-- FIN CÓDIGO DE SELLO NORTIC A4:2014 -->
-        <p></p>
     </div>
-</div>              
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <div id="headerr">
+      <ul>
+        <li>
+          <image src="img/img1.jpg" alt="">
+        </li>
+        <li>
+          <image src="img/img1.jpg" alt="">
+        </li>
+
+
+      </ul>
+    </div>
+    <div class="contenedor">
+      <div class="item" id="item1">
+        <h3>COMPROMISO</h3>
+      </div>
+      <div class="item" id="item2">
+        <h3>RESPETO</h3>
+      </div>
+      <div class="item" id="item3">
+        <h3>EXCELENCIA</h3>
+      </div>
+      <div class="item" id="item4">
+        <h3>INNOVACIÓN</h3>
+      </div>
+    </div>
+    <div style="background: white;">
+      <div class="">
+        <div class="container" id="noticia" style="background: white;">
+          <h2 class="blog-post-title" style="color:black;">Noticias del Ámbito Laboral</h2>
+          <br></br>
+          <div style class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="width: 360px;">
+                <img src="noticias/noticia1.JPG" height="300" width="350" alt="">
+                <a class="mod-articles-category-title "
+                  href="https://www.diariolibre.com/economia/el-mercado-laboral-crece-un-175-en-junio-CD20236576"
+                  target="_blank" title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19">
+                  El mercado laboral crece un 17.5% en Junio </a>
+                <small class="text-muted">20/07/2020</small>
+
+                <p class="card-text">El reinicio de las actividades económicas en el país permitió que el mercado
+                  laboral se recuperara en junio, en comparación con mayo, luego de que se levantaran las restricciones
+                  impuestas por el Poder Ejecutivo.</p>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="width: 360px;">
+                <img src="noticias/noticia3.JPG" height="300" width="350" alt="">
+                <a class="mod-articles-category-title "
+                  href="https://www.diariolibre.com/actualidad/american-airlines-advierte-que-podria-suspender-a-25000-empleados-HF20162324"
+                  target="_blank" title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19">
+                  Empresa advierte suspensión de empleados </a>
+                <small class="text-muted">20/07/2020</small>
+
+                <p class="card-text">American Airlines advirtió este miércoles de que podría verse forzada a suspender a
+                  25,000 empleados, lo que supone un 20 % de su plantilla, uniéndose así a United, otra de las
+                  aerolíneas principales de Estados Unidos.</p>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="width: 360px;">
+                <img src="noticias/noticia2.JPG" height="300" width="350" alt="">
+                <a class="mod-articles-category-title "
+                  href="https://www.diariolibre.com/economia/la-tasa-de-empleo-en-los-paises-desarrollados-cae-por-vez-primera-desde-2013-FF20164760"
+                  title="Ir a Realizan primer hackathon virtual en RD para luchar contra COVID-19" target="_blank">
+                  La tasa de empleo en los paises desarrollados cae por primera vez desde el 2013 </a>
+                <small class="text-muted">20/07/2020</small>
+
+                <p class="card-text">La tasa de empleo en los países desarrollados, que mide la parte de personas en
+                  edad de trabajar que tienen un empleo, cayó tres décimas en el primer trimestre de 2020, para situarse
+                  en el 68.6 %.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-10">
+
+      <h2 class="blog-post-title" style="font-family: Georgia;">Enlaces de Interes</h2>
+      <div class="contenedor">
+        <div class="enlaces"><a href="http://dominicana.gob.do/" target="_blank">
+            <img src="noticias/noticia4.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
+          </a></div>
+        <div class="enlaces"><a href="https://911.gob.do/" target="_blank">
+            <img src="noticias/noticia5.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
+          </a></div>
+        <div class="enlaces"><a href="https://observatorioserviciospublicos.gob.do/" target="_blank">
+            <img src="noticias/noticia6.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
+          </a></div>
+        <div class="enlaces"><a href="https://311.gob.do/" target="_blank">
+            <img src="noticias/noticia7.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1">
+          </a></div>
+
+      </div>
+      <div class="col-md-12 columns">
+        <div class="owl-carousel owl-theme owl-loaded owl-drag">
+
+          <div class="owl-stage-outer">
+            <div class="owl-stage"
+              style="transform: translate3d(-589px, 0px, 0px); transition: all 0.25s ease 0s; width: 2062px;">
+              <div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="http://www.311.gob.do/"
+                  target="_blank" title="Ir a  Sistema Nacional de Atención Ciudadana 3-1-1">
+                  <div class="item pulse">
+                    <img src="noticias/noticia4.JPG" alt=" Sistema Nacional de Atención Ciudadana 3-1-1"
+                      class="img-responsive">
+                  </div>
+                </a></div>
+              <div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a href="https://911.gob.do/"
+                  target="_blank" title="Ir a Sistema Nacional de Atención a Emergencias y Seguridad 9-1-1">
+                  <div class="item pulse">
+                    <img src="noticias/noticia5.JPG" alt="Sistema Nacional de Atención a Emergencias y Seguridad 9-1-1"
+                      class="img-responsive">
+                  </div>
+                </a></div>
+              <div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a
+                  href="https://serviciosrd.gob.do/" target="_blank" title="Ir a Servicios en Línea ">
+                  <div class="item pulse">
+                    <img src="/images/logos/servicios-en-linea.svg" alt="Servicios en Línea " class="img-responsive">
+                  </div>
+                </a></div>
+              <div class="owl-item cloned" style="width: 132.25px; margin-right: 15px;"><a
+                  href="http://observatorioserviciospublicos.gob.do/" target="_blank"
+                  title="Ir a Observatorio Nacional SP">
+                  <div class="item pulse">
+                    <img src="/images/logos/observatorio.svg" alt="Observatorio Nacional SP" class="img-responsive">
+                  </div>
+
+                  </nav>
+              </div>
+              <br>
+              </br>
+
+              <div id="logo_pie" style="text-align: center;">
+                <!-- <div class="custom custom_footer" style="width: 24%; display: inline-table;"></div> -->
+                <div style="display: inline-grid;  line-height: 17px;" class="all_footer_m">
+                  <span class="logo_pie_m">
+                    <div class="custom" style="padding: 2%">
+                      <img class="logo_itla" src="img/escudo.JPG" alt="Escudo Dominicano">
+                    </div>
+                  </span>
+                  <span class="texto3">Total Ambition To Learn</span>
+                  <span class="texto">
+                    <span class="texto_pie_m">Ensache Quisqueya, Roberto Pastoriza #863.
+                      <br>
+                      <a href="tel:809-550-0259" style="text-decoration: none;"><i class="fa fa-phone"></i>
+                        849-763-5975</a> <a href="lisbethcorporan01@gmail.com" style="text-decoration: none;"><i
+                          class="fa fa-envelope"></i>totalambitiontolearn@gmail.com</a><br>
+                    </span>
+                    <span class="menu_pie1" style="margin-bottom: 15px">
+                      <a href="Index.html" style="text-decoration: none;">TÉRMINOS DE USO</a> |
+                      <a href="Index.html" style="text-decoration: none;">POLÍTICAS DE PRIVACIDAD</a> |
+                      <a href="Index.html" style="text-decoration: none;">PREGUNTAS FRECUENTES</a>
+                      <br>
+                      © 2020 TODOS LOS DERECHOS RESERVADOS
+                    </span>
+                    <span class="menu_pie_m">
+                      <a href="Index.html" style="text-decoration: none;">INICIO</a> |
+                      <a href="contacto.html" style="text-decoration: none;">CONTACTO</a>
+                      <br>
+                      <a id="subir" href="" style="text-decoration: none;">SUBIR</a>
+                      <br>
+                      <span><a
+                          href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                          title="Ver Certificación" target="_blank">Versión móvil certificada bajo la NORTIC
+                          A2:2016 <b> 14052-02-A216051 </b></a></span>
+                      <br>
+                      © 2020 TODOS LOS DERECHOS RESERVADOS<br>
+                      REPÚBLICA DOMINICANA
+                    </span>
+                  </span>
+                </div>
+
+                <div class="custom custom_footer">
+                  <!-- CÓDIGO DE SELLO NORTIC A2:2016 -->
+                  <span id="selloNortic">
+                    <a href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                      hreflang="es" target="_blank" rel="nofollow"
+                      title="Medio web certificado bajo la NORTIC A2:2016 con el NIU 14052-01-A216051">
+                      <img src="img/nortic1.JPG" lang="es"
+                        alt="Sello de certificación de la A2:2016 con el NIU 14052-01-A216051">
+                    </a>
+                  </span>
+                  <!-- FIN CÓDIGO DE SELLO NORTIC A2:2016 -->
+                  <!-- CÓDIGO DE SELLO NORTIC A3:2014 -->
+                  <span id="selloNortic">
+                    <a href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                      hreflang="es" target="_blank" rel="nofollow"
+                      title="Medio web certificado bajo la NORTIC A3:2014 con el NIU 14052-02-A314062">
+                      <img src="img/nortic2.JPG" lang="es"
+                        alt="Sello de certificación de la A3:2014 con el NIU 14052-02-A314062">
+                    </a>
+                  </span>
+                  <!-- FIN CÓDIGO DE SELLO NORTIC A3:2014 -->
+
+                  <!-- CÓDIGO  DE SELLO NORTIC A5:2015 -->
+                  <span id="selloNortic">
+                    <a title="Medio web certificado bajo la NORTIC A5:2015 con el NIU 14052-02-A519008"
+                      href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                      hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
+                      <img lang="es" src="img/nortic3.JPG"
+                        alt="Sello de certificación de la A5:2015 con el NIU 14052-02-A519008">
+                    </a>
+                  </span>
+                  <!-- FIN CÓDIGO DE SELLO NORTIC A5:2015 -->
+                  <!-- CÓDIGO  DE SELLO NORTIC E1:2014 -->
+                  <span id="selloNortic">
+                    <a title="Medio web certificado bajo la NORTIC E1:2014 con el NIU 14052-02-E114131"
+                      href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                      hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
+                      <img lang="es" src="img/nortic 4.JPG"
+                        alt="Sello de certificación de la E1:2014 con el NIU 14052-02-E114131">
+                    </a>
+                  </span>
+                  <!-- FIN CÓDIGO DE SELLO NORTIC E1:2014 -->
+                  <!-- CÓDIGO DE SELLO NORTIC A4:2014 -->
+                  <span id="selloNortic">
+                    <a title="Medio web certificado bajo la NORTIC A4:2014 con el NIU 14052-01-A414026"
+                      href="http://optic.gob.do/nortic/index.php/certificaciones/instituciones-certificadas/item/instituto"
+                      hreflang="es" rel="nofollow" target="_blank" style="text-decoration: none;">
+                      <img lang="es" src="img/nortic5.JPG"
+                        alt="Sello de certificación de la A4:2014 con el NIU 14052-01-A414026">
+                    </a>
+                  </span>
+                  <!-- FIN CÓDIGO DE SELLO NORTIC A4:2014 -->
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
