@@ -71,10 +71,74 @@
           <div class="col-4 d-flex justify-content-end align-items-center">
 
             <!--BARRA DE NAVEGACION -->
-              <div class="form-group">
-            <img src="img/escudo.svg" alt="" height="60" width="250">
-                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" style="width: 250px; height: 30px; border-radius: 10px;">
-           
+            <script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+            <script type="text/javascript" src="jquery-ui.js"></script>
+            
+            <div class="form-group">
+              <img src="img/escudo.svg" alt="" height="60" width="250">
+              <input id="tag" class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" style="width: 250px; height: 30px; border-radius: 10px;">
+  
+              <script type="text/javascript">
+  
+                $(document).ready(function () {
+                  var items = [
+                    "inicio",
+                    "Quienes somos",
+                    "historia",
+                    "interes",
+                    "capacitaciones",
+                    "vacantes",
+                    "areas de trabajo",
+                    "noticias",
+                    "transparencia",
+                    "manual de usuario",
+                    "recomendaciones del equipo"
+                  ];
+  
+                  $("#tag").autocomplete({
+                    source: items,
+                    select: function (event, item){
+                      console.log(item.item.value);
+                      if (item.item.value==="inicio") {
+                        location.href ="index.html";
+                      }
+                      if (item.item.value==="Quienes somos") {
+                        location.href ="quienes_somos.html";
+                      }
+                      if (item.item.value==="historia") {
+                        location.href ="quienes_somos.html#historia";
+                      }
+                      if (item.item.value==="interes") {
+                        location.href ="quienes_somos.html#propietarios";
+                      }
+                      if (item.item.value==="capacitaciones") {
+                        location.href ="servicios.html";
+                      }
+                      if (item.item.value==="vacantes") {
+                        location.href ="servicios.html#vacante";
+                      }
+                      if (item.item.value==="areas de trabajo") {
+                        location.href ="servicios.html#trabajo";
+                      }
+                      if (item.item.value==="transparencia") {
+                        location.href ="transparencia.html";
+                      }
+                      if (item.item.value==="manual de usuario") {
+                        location.href ="Manual%20de%20usuario.pdf";
+                      }
+                      if (item.item.value==="recomendaciones del equipo") {
+                        location.href ="RECOMENDACIONES%20DEL%20EQUIPO.pdf";
+                      }
+                      if (item.item.value==="noticias") {
+                        location.href ="index.html";
+                      }
+                    }
+                  });
+  
+                });
+  
+              </script>
             <a href="Index.html" class="text-mute">INICIO</a>&nbsp;|&nbsp;<a href="contacto.html" class="text-mute">CONTACTOS</a>&nbsp;|&nbsp;<a href="login.php" class="text-mute">LOGIN</a>
             </div>
           </div>
@@ -286,7 +350,7 @@
         <p></p>
     </div>
 </div>              
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <!--  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
